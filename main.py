@@ -1,5 +1,4 @@
 import streamlit as st
-import pyperclip
 import os
 from openai import OpenAI
 from dotenv import load_dotenv
@@ -74,6 +73,5 @@ if st.button("Rewrite Email"):
             edited_email = st.text_area(
                 "Edit your improved email:", value=email_text, height=300
             )
-            pyperclip.copy(edited_email)
     else:
         st.error("Please paste an email to rewrite.")
